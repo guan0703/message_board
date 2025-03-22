@@ -1,6 +1,8 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "message_board", 3306);
 $id = $_GET['id'];
+
+// 找出要編輯的那筆留言
 $result = $conn->query("SELECT * FROM messages WHERE id = $id");
 $row = $result->fetch_assoc();
 ?>
